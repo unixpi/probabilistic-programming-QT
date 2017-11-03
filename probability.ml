@@ -8,18 +8,11 @@ let rec geometric p =
   | 0 -> 1 + geometric p
 
 let flip = Random.bool
-
-let rec repeat n x =
-  match n with
-  | 0 -> []
-  | _ -> x() :: repeat (n-1) x
-
-let power a b =
-  match b with
-  | 0 -> 1
-  | _ -> a * power a (b-1)
-    
-
+	
+(* 
+Leva - 1992 - A fast normal random number generator
+http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.544.5806&rep=rep1&type=pdf
+*)
 let rec gaussian u s =
   let u = Random.float 1.0 in
   let v = Random.float 1.0 in
@@ -30,7 +23,34 @@ let rec gaussian u s =
   if q >= 0.27597 && ( q > 0.27846 || v *. v > -4.0 *. u *. u *. log(u)) then
     gaussian u s
   else
-    u +. s *. v /. u;;
+    u +. s *. v /. u;;     
+
+let rec repeat n x =
+  match n with
+  | 0 -> []
+  | _ -> x() :: repeat (n-1) x
+
+let twoGaussians = (fun ()-> (gaussian 0.0 1.0) *. (gaussian 0.0 1.0));;
+  
+let power a b =
+  match b with
+  | 0 -> 1
+  | _ -> a * power a (b-1)
+
+let fairCoin = (fun() -> ( if (flip ()) then "h" else "t"))
+let trickCoin = (fun() -> ( if (bernoulli 0.95 = 1) then "h" else "t"))
+
+let makeCoin w = (fun() -> (if (bernoulli w = 1) then "h" else "t"))
+
+(* Prediction, Simulation, and Probabilities *)
+
+let randomPair = (fun()-> [flip(); flip()]);;
+
+  
+
+
+
+    
     
     
     
