@@ -5,6 +5,8 @@
 (* specs:
    R^2 -> ((0,1), (0,1))
    generate 8 values in R^2
+
+   To Run -> simulated_result 100000
 *)
 
 let simulated_result = (fun n -> float_of_int (result (repeat n)) /. float_of_int n);;
