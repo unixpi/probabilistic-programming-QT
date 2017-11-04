@@ -1,7 +1,7 @@
 (*
 Imagine a room full of 100 people with 100 dollars each. With every tick of the clock, every person with money gives a dollar to one randomly chosen other person. After some time progresses, how will the money be distributed?
 
-To Run -> simulate_result 20000
+To Run -> List.sort compare (simulate_result 20000)
 *)
 
 let simulate_result = (fun n -> repeat (generate 100 100) n);;
