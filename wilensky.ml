@@ -8,18 +8,23 @@ let rec generate n m =
   | n -> m :: generate (n-1) m
 
 
-(* fix this --> need to backwards in list before giving money *)		       
-let rec tick people =
-  match people with
-  | [] -> []
-  | h :: t -> if h > 0 then (h-1) :: tick (add1 people (Random.int 100))
-	      else h :: tick t
-		
-let rec add1 people i =
-  match i, people with
-  | 0, h :: t -> (h+1) :: t
-  | _, h :: t -> h :: add1 t (i-1)
+let rec tick people n =
+  match n with
+  | 0 -> people
+  | _ -> if (nth people n) > 0 then
+	   tick (update_plus (update_minus people n) (Random.int 100)) (n-1)
+	 else
+	   tick people (n-1)
+	   
   
+
+let rec nth lst n =
+  match lst, n with
+  | h :: t, 0 -> h
+  | h :: t, _ -> nth t (n-1)
+       
+let update_plus lst pos = List.mapi (fun i x -> if i = pos then x + 1 else x) lst
+let update_minus lst pos = List.mapi (fun i x -> if i = pos && x > 0 then x - 1 else x) lst				    
   
 				
   
