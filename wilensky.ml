@@ -19,7 +19,7 @@ let rec generate n m =
 
 let rec tick people n =
   match n with
-  | 0 -> people
+  | -1 -> people
   | _ -> if (nth people n) > 0 then
 	   tick (update_plus (update_minus people n) (Random.int 100)) (n-1)
 	 else
