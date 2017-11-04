@@ -1,6 +1,15 @@
 (*
 Imagine a room full of 100 people with 100 dollars each. With every tick of the clock, every person with money gives a dollar to one randomly chosen other person. After some time progresses, how will the money be distributed?
+
+To Run -> simulate_result 20000
 *)
+
+let simulate_result = (fun n -> repeat (generate 100 100) n);;
+      
+let rec repeat people n =
+  match n with
+  | 0 -> people
+  | _ -> repeat (tick people 99) (n-1)
 
 let rec generate n m =
   match n with
@@ -14,9 +23,7 @@ let rec tick people n =
   | _ -> if (nth people n) > 0 then
 	   tick (update_plus (update_minus people n) (Random.int 100)) (n-1)
 	 else
-	   tick people (n-1)
-	   
-  
+	   tick people (n-1)	     
 
 let rec nth lst n =
   match lst, n with
