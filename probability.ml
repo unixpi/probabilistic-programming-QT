@@ -121,3 +121,15 @@ let winner team1 team2 =
 
 (* winner ["alice";"bob"] ["ted";"tom"];; *)
 (* Notice that strength is memoized because this is a property of a person true across many matches, while lazy isn’t. Each time you run this program, however, a new “random world” will be created: people’s strengths will be randomly re-generated, then used in all the matches. *)							       
+
+(* Cognition and conditioning *)							       
+(* Generative models also enable reasoning in other directions. For instance, if we have a generative model in which X is the output of a process that depends on Y
+
+we may ask: “assuming I have observed X, how must Y have been?” That is we can reason backward from outcomes to initial conditions. 
+
+ In its most basic form, causal attribution is conditional inference: given some observed effects, what were the likely causes? Predictions are conditional inferences in the opposite direction: given that I have observed some known cause, what are its likely effects? These inferences can be described by conditioning a probabilistic program that expresses a causal model, or understanding of how effects depend on causes.
+ *)
+
+(* Hypothetical Reasoning with query *)							       
+
+							       
