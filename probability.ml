@@ -84,9 +84,17 @@ This type of modeling is called random world style (McAllester, Milch, & Goodman
 *)
 
 
+(*
+flip = Random.bool
+
+Below we define a function flipN that encodes the outcome of the nth flip of a particular coin. There are a countably infinite number of such flips, each independent of all the others. The outcome of each, once determined, will always have the same value.
+*)
+		     
+let flipN = mem(fun n -> flip ());;    
     
-    
-    
+(*
+In computer science memoization is an important technique for optimizing programs by avoiding repeated work. In the probabilistic setting, memoization actually affects the meaning of the memoized function.
+*)
     
   
   
