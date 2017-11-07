@@ -96,6 +96,8 @@ let flipN = mem(fun n -> flip ());;
 In computer science memoization is an important technique for optimizing programs by avoiding repeated work. In the probabilistic setting, memoization actually affects the meaning of the memoized function.
 *)
 
-  (* Bayesian Tug of War *)
+(* Bayesian Tug of War *)
+
+
   
   
