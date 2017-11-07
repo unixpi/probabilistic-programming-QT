@@ -73,12 +73,15 @@ let mem f =
       Not_found ->
         let y = f x in
           m := (x, y) :: !m ;
-          y		
+          y
+
+(* n.b. There is a problem with the above mem if f is recursive. Once memo calls f to compute f x, any recursive calls made by f will not be intercepted by mem. *)
 
 let eyeColorMem = mem(fun person -> uniformDraw ["blue";"green";"brown"])
 
-
-
+(*
+This type of modeling is called random world style (McAllester, Milch, & Goodman, 2008). Note that we don’t have to specify ahead of time the people whose eye color we will ask about: the distribution on eye colors is implicitly defined over the infinite set of possible people, but only constructed “lazily” when needed. Memoizing stochastic functions thus provides a powerful toolkit to represent and reason about an unbounded set of properties of an unbounded set of objects.
+*)
 
 
     
