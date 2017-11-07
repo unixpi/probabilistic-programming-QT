@@ -96,6 +96,28 @@ let flipN = mem(fun n -> flip ());;
 In computer science memoization is an important technique for optimizing programs by avoiding repeated work. In the probabilistic setting, memoization actually affects the meaning of the memoized function.
 *)
 
-  (* Bayesian Tug of War *)
-  
-  
+(* Bayesian Tug of War *)
+
+let strength = mem(fun person -> gaussian 0.0 1.0)
+let lazyy = (fun person -> bernoulli 0.25)
+
+let pulling person =
+     if (lazyy person = 1) then (strength person) /. 2.0 else strength person;;	      
+
+let rec map f lst =
+  match lst with
+  | [] -> []
+  | h :: t -> f h :: map f t
+
+let rec sum lst =
+  match lst with
+  | [] -> 0.0
+  | h :: t -> h +. sum t
+
+let totalPulling team = sum (map pulling team);;
+
+let winner team1 team2 =
+  if totalPulling team1 < totalPulling team2 then team2 else team1
+
+(* winner ["alice";"bob"] ["ted";"tom"];; *)
+(* Notice that strength is memoized because this is a property of a person true across many matches, while lazy isn’t. Each time you run this program, however, a new “random world” will be created: people’s strengths will be randomly re-generated, then used in all the matches. *)							       
