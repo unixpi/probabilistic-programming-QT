@@ -46,8 +46,24 @@ let makeCoin w = (fun() -> (if (bernoulli w = 1) then "h" else "t"))
 
 let randomPair = (fun()-> [flip(); flip()]);;
 
+(* stochastic recursion *)
+let rec length lst =
+  match lst with
+  | [] -> 0
+  | h :: t -> 1 + length t
 
+let rec nth lst n =
+  match lst, n with
+  | h::t, 0 -> h
+  | h::t, n -> nth t (n-1)
 
+let uniformDraw lst =
+  let draw = Random.int (length lst) in nth lst draw;;
+  
+  
+			
+  
+  
 
 
     
