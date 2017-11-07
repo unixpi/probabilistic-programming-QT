@@ -59,11 +59,26 @@ let rec nth lst n =
 
 let uniformDraw lst =
   let draw = Random.int (length lst) in nth lst draw;;
-  
-  
-			
-  
-  
+
+let eyeColor person = uniformDraw ["blue";"green";"brown"];;
+
+(* List.assoc "three" [("one", 1); ("two",2); ("three",3)];; *)  
+
+let mem f =
+  let m = ref [] in
+  fun x ->
+    try
+      List.assoc x !m
+    with
+      Not_found ->
+        let y = f x in
+          m := (x, y) :: !m ;
+          y		
+
+let eyeColorMem = mem(fun person -> uniformDraw ["blue";"green";"brown"])
+
+
+
 
 
     
