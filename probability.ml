@@ -184,6 +184,12 @@ let takeSample = (fun () ->
      is finding useful ways to do conditional inference - i.e to sample efficiently
 
    Rejection sampling is a useful starting point, but is often not efficient
-*)
+
+   Probabilistic programming languages usually contain several different sampling
+   methods. One widely used method is the Metropolis Hastings algorithm
+   
+   I'm going to take a break here and brush up on my Markov chains  
+   Blitzstein lecture --> https://www.youtube.com/watch?v=8AJPs3gvNlY&index=32&list=PLLVplP8OIVc8EktkrD3Q8td0GmId7DjW0
+*) 
 
 
