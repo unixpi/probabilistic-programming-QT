@@ -130,6 +130,55 @@ we may ask: “assuming I have observed X, how must Y have been?” That is we c
  In its most basic form, causal attribution is conditional inference: given some observed effects, what were the likely causes? Predictions are conditional inferences in the opposite direction: given that I have observed some known cause, what are its likely effects? These inferences can be described by conditioning a probabilistic program that expresses a causal model, or understanding of how effects depend on causes.
  *)
 
-(* Hypothetical Reasoning with query *)							       
+(* Hypothetical Reasoning with query *)							
 
-							       
+let rec takeSample = (fun () ->
+  let a = (if flip () then 1 else 0) in
+  let b = (if flip () then 1 else 0) in
+  let c = (if flip () then 1 else 0) in
+  let d = a + b + c in
+  if (d >= 2) then a else takeSample ()
+  )
+
+let rec fold_left f acc lst =
+  match lst with
+  | [] -> acc
+  | h :: t -> fold_left f (f acc h) t
+
+let percentage0 lst =
+  float_of_int(fold_left (fun acc x -> if x = 0 then acc + 1 else acc) 0 lst) /. float_of_int(length lst)
+
+let percentage1 lst = 1.0 -. (percentage0 lst)
+(* percentage0 (repeat 100 takeSample) *)
+
+(* Notice that we have used a stochastic recursion to sample the definitions repeatedly until we get d >= 2, and we then return A: we generate and test until the condition is satisfied. This process is known as rejection sampling; *)			       
+
+let realData = 1 (* true *)
+
+let prior = (fun () -> bernoulli 0.5)
+
+let observe h = if h = 1 then bernoulli 0.9 else bernoulli 0.1
+
+(* probability of hypothesis given observedData = data
+   Another way of thinking of this (computationally):
+   0) generate hypothesis
+   1) generate data under current hypothesis
+   2) check if this generated data is equal to observed data
+   3) if so return current hypothesis value (success! current hypothesis managed to
+      generate data indistinguishable from the real data)
+   4) otherwise repeat (i.e generate a new hypothesis, and test it with real data)
+
+   5) repeat the above process, 100s of times, storing all the return values
+   --> this will give you the probability of each hypothesis tested being correct
+*)			       
+
+let takeSample = (fun () ->
+    let hypothesis = prior () in
+    let generatedDataUnderHypothesis = observe hypothesis in
+    if generatedDataUnderHypothesis = realData then hypothesis else takeSample () )
+		   
+(* implementations of query 
+   --much of the difficulty of implementing probabilistic languages / models
+     is finding useful ways to do conditional inference - i.e to sample efficiently
+*)
+
