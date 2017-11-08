@@ -1,3 +1,5 @@
+(* Implementing my own probabilistic programming language - based on Church *)
+
 let bernoulli p =
   let flip = Random.float 1.0 in
   if flip < p then 1 else 0
@@ -180,5 +182,8 @@ let takeSample = (fun () ->
 (* implementations of query 
    --much of the difficulty of implementing probabilistic languages / models
      is finding useful ways to do conditional inference - i.e to sample efficiently
+
+   Rejection sampling is a useful starting point, but is often not efficient
 *)
+
 
