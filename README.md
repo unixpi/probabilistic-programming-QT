@@ -10,9 +10,9 @@ called Church. For the time being I am following the Church tutorial found at ht
 I will also occasionally experiment with using simulations to provide answers to probability problems.
 
 https://github.com/sachaysl/probabilistic-programming-QT/blob/master/cancer-cluster.ml  provides an answer to a problem on randomness posted by Nassim Nicholas Taleb on twitter : **You throw 8 darts uniformly randomly on a 2D map with 16 squares.
-   what is the probability of getting 3 dots in a single square (any square?) **
+   what is the probability of getting 3 dots in a single square (any square?)**
 
-https://github.com/sachaysl/probabilistic-programming-QT/blob/master/wilensky.ml provides an answer to a counter-intuitive problem posed by the computer scientist Uri Wilensky :  ** Imagine a room full of 100 people with 100 dollars each. With every tick of the clock, every person with money gives a dollar to one randomly chosen other person. After some time progresses, how will the money be distributed? **
+https://github.com/sachaysl/probabilistic-programming-QT/blob/master/wilensky.ml provides an answer to a counter-intuitive problem posed by the computer scientist Uri Wilensky :  **Imagine a room full of 100 people with 100 dollars each. With every tick of the clock, every person with money gives a dollar to one randomly chosen other person. After some time progresses, how will the money be distributed?**
 
 # Motivations
 I subscribe to Ferenc Huszár's hypothesis that probabilistic programming could do for Bayesian machine learning what Theano and TensorFlow have done for neural networks.
