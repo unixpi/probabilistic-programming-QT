@@ -14,7 +14,7 @@ https://github.com/sachaysl/probabilistic-programming-QT/blob/master/cancer-clus
 https://github.com/sachaysl/probabilistic-programming-QT/blob/master/wilensky.ml provides an answer to a counter-intuitive problem posed by the computer scientist Uri Wilensky.
 
 # Motivations
-I subscribe to the hypothesis that probabilistic programming could do for Bayesian machine learning what Theano and TensorFlow have done for neural networks.
+I subscribe to Ferenc Huszár's hypothesis that probabilistic programming could do for Bayesian machine learning what Theano and TensorFlow have done for neural networks.
 
 Deep networks are all the rage right now not because they are some brilliant model,but because of the details of how we optimize them. See https://t.co/anGfjMU1F4
 
