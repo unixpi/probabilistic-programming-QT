@@ -18,7 +18,7 @@ I subscribe to the hypothesis that probabilistic programming could do for Bayesi
 
 Deep networks are all the rage right now not because they are some brilliant model,but because of the details of how we optimize them. See https://t.co/anGfjMU1F4
 
-They are, at their core, deeply inelegant (and rather stupid) black-box solutions. In short, they don't know what they don't know.
+They are, at their core, deeply inelegant (and rather stupid) black-box solutions. In short, they don't know what they don't know. See https://www.youtube.com/watch?v=XaQu7kkQBPc and https://www.technologyreview.com/s/604087/the-dark-secret-at-the-heart-of-ai/
 
 In contrast, probabilistic programming uses beautiful and elegant methods from probability theory to automate machine learning in a way that allows the user to quantify uncertainty.
 
