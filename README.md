@@ -25,8 +25,10 @@ In contrast, **probabilistic programming uses beautiful and elegant concepts fro
 
 The ultimate challenge for probabilistic programming is to make markov chain monte-carlo methods as reliable as stochastic gradient descent now is for deep networks.
 
-# Inventing the software for the computing environment of the future
 Faster computers combined with speed improvements to MCMC algorithms (see Persi Diaconis' paper https://projecteuclid.org/download/pdfview_1/euclid.bj/1377612852) mean this challenge has a good chance of being met in the next 5-10 years.
+
+# Inventing the software for the computing environment of the future
+I believe probabilistic programming has the potential to revolutionize the scientific method. It will enable scientists to think thoughts that are currently unthinkable under current technologies. See http://worrydream.com/#!/MediaForThinkingTheUnthinkable 
 
 
 
