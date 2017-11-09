@@ -24,9 +24,12 @@ In contrast, probabilistic programming uses beautiful and elegant methods from p
 
 The challenge for probabilistic programming is to make Markov Chain Monte-Carlo methods as reliable as stochastic gradient descent now is for deep networks.
 
-Faster computers combined with speed improvements to MCMC algorithms (see Persi Diaconis' paper https://projecteuclid.org/download/pdfview_1/euclid.bj/1377612852) mean thischallenge will likely be solved in the next 5-10 years.
+# Inventing the software for the computing environment of the future
+Faster computers combined with speed improvements to MCMC algorithms (see Persi Diaconis' paper https://projecteuclid.org/download/pdfview_1/euclid.bj/1377612852) mean thischallenge has a good chance of being solved in the next 5-10 years.
+
+
 
 # Resources (to be updated)
 For more on MCMC see https://math.uchicago.edu/~shmuel/Network-course-readings/MCMCRev.pdf
 
-For more on probabilistic programming see :
+For an overview probabilistic programming see https://www.youtube.com/watch?v=-8QMqSWU76Q&t=2s
