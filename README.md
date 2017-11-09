@@ -7,7 +7,7 @@ The language is called QT and is based on the probabilistic programming language
 called Church. For the time being I am following the Church tutorial found at http://v1.probmods.org/ and implementing the relevant functions in OCaml (see probability.ml)
 
 # Simulations
-I will also experiment with using simulations to provide answers to probability problems.
+I will also occasionally experiment with using simulations to provide answers to probability problems.
 
 https://github.com/sachaysl/probabilistic-programming-QT/blob/master/cancer-cluster.ml  provides an answer to a problem on randomness posted by Nassim Nicholas Taleb on twitter.
 
