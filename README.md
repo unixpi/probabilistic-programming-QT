@@ -28,7 +28,7 @@ The ultimate challenge for probabilistic programming is to make markov chain mon
 Faster computers combined with speed improvements to MCMC algorithms (see Persi Diaconis' paper https://projecteuclid.org/download/pdfview_1/euclid.bj/1377612852) mean this challenge has a good chance of being met in the next 5-10 years.
 
 # Inventing the software for the computing environment of the future
-I believe probabilistic programming has the potential to revolutionize the scientific method. It will certainly enable scientists to think thoughts that are currently unthinkable under current technologies. See http://worrydream.com/#!/MediaForThinkingTheUnthinkable 
+I believe probabilistic programming has the potential to revolutionize the scientific method. It will certainly enable scientists to think thoughts that are currently unthinkable with current technologies. See http://worrydream.com/#!/MediaForThinkingTheUnthinkable
 
 
 
