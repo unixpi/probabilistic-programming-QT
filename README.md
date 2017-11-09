@@ -1,4 +1,4 @@
-# QT - my probabilistic-programming language
+# QT - A probabilistic-programming language
 
 This is an attempt to learn more about probabilistic programming by creating my
 own language.
