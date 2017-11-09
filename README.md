@@ -9,9 +9,9 @@ called Church. For the time being I am following the Church tutorial found at ht
 # Simulations
 I will also experiment with using simulations to provide answers to probability problems.
 
-cancer-cluster.ml provides an answer to a problem on randomness posted by Nassim Nicholas Taleb on twitter.
+https://github.com/sachaysl/probabilistic-programming-QT/blob/master/cancer-cluster.ml  provides an answer to a problem on randomness posted by Nassim Nicholas Taleb on twitter.
 
-wilensky.ml provides an answer to a counter-intuitive problem posed by the computer scientist Uri Wilensky.
+https://github.com/sachaysl/probabilistic-programming-QT/blob/master/wilensky.ml provides an answer to a counter-intuitive problem posed by the computer scientist Uri Wilensky.
 
 # Motivations
 I subscribe to the hypothesis that probabilistic programming could do for Bayesian machine learning what Theano and TensorFlow have done for neural networks.
