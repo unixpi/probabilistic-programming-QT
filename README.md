@@ -35,4 +35,4 @@ I believe probabilistic programming has the potential to revolutionize the scien
 # Resources (to be updated)
 For more on MCMC see https://math.uchicago.edu/~shmuel/Network-course-readings/MCMCRev.pdf
 
-For an overview probabilistic programming see https://www.youtube.com/watch?v=-8QMqSWU76Q&t=2s
+For an overview of probabilistic programming see https://www.youtube.com/watch?v=-8QMqSWU76Q&t=2s
