@@ -22,7 +22,7 @@ They are, at their core, deeply inelegant (and rather stupid) black-box solution
 
 In contrast, probabilistic programming uses beautiful and elegant methods from probability theory to automate machine learning in a way that allows the user to quantify uncertainty.
 
-The ultimate challenge for probabilistic programming is to make Markov Chain Monte-Carlo methods as reliable as stochastic gradient descent now is for deep networks.
+The ultimate challenge for probabilistic programming is to make markov chain monte-carlo methods as reliable as stochastic gradient descent now is for deep networks.
 
 # Inventing the software for the computing environment of the future
 Faster computers combined with speed improvements to MCMC algorithms (see Persi Diaconis' paper https://projecteuclid.org/download/pdfview_1/euclid.bj/1377612852) mean this challenge has a good chance of being met in the next 5-10 years.
