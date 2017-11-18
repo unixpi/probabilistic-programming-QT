@@ -4,12 +4,28 @@ What is the probability of four random integers having a common factor?
 
 (* implementation of the Sieve of Eratosthenese
    we use 0 to denote struck-out numbers.
-   could be made more efficient by choosing to strike out multiples
-   above p^2 rather than p
+   could be made much more efficient
+   but remember, premature efficiency is the root of all evil!
 *)
 
-let rec strike_nth k n l = match l with
+
+let rec filter f lst =
+  match lst with
   | [] -> []
-  | h :: t ->
-     if k = 0 then 0 :: strike_nth (n-1) n t
-     else h :: strike_nth (k-1) n t;;
+  | h :: t -> if f h  then h :: filter f t else filter f t
+
+let rec map f lst =
+  match lst with
+  | [] -> []
+  | h :: t -> f h :: map f t
+			 
+let primes n =
+  let limit = truncate(sqrt(float n)) in
+  let rec range a b = if a > b then [] else a :: range (a+1) b in
+  let rec sieve_primes l = match l with
+    | [] -> []
+    | 0 :: t -> sieve_primes t
+    | h :: t -> if h > limit then List.filter ((<) 0) l else
+		  h :: sieve_primes (map (fun x -> if x mod h = 0 then 0 else x) l) in
+  sieve_primes (range 2 n);;
+						       
