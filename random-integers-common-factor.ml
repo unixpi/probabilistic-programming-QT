@@ -25,7 +25,6 @@ let primes n =
   let rec sieve_primes l = match l with
     | [] -> []
     | 0 :: t -> sieve_primes t
-    | h :: t -> if h > limit then l else
+    | h :: t -> if h > limit then filter ((<) 0) l else
 		  h :: sieve_primes (map (fun x -> if x mod h = 0 then 0 else x) t) in
-  sieve_primes (range 2 n);;
-						       
+  sieve_primes (range 2 n);;						       
